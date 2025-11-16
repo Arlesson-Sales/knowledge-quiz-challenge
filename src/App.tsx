@@ -1,10 +1,17 @@
-import { type JSX } from "react";
+import { type JSX, createContext } from "react";
+import Quiz from "./components/Quiz/Quiz.tsx";
+
+interface globalProps {
+    theme: string;
+};
 
 export default function App(): JSX.Element
 {
+    const QuizAppContext: React.Context<globalProps> = createContext({ theme: "light" })
+
     return (
-        <div>
-            <h1>knowledge Quiz Challenge</h1>
-        </div>
+        <QuizAppContext.Provider value={{ theme: "light" }}>
+            <Quiz />
+        </QuizAppContext.Provider>
     );
 }
