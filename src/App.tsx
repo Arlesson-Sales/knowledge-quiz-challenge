@@ -1,9 +1,15 @@
-import Start from '@/pages/Start.tsx'
+import Start from '@/pages/Start'
+import { motion } from 'motion/react'
+
 const App = () => {
   return (
-    <div className='min-h-screen bg-linear-to-br from-blue-50 to-indigo-100 flex items-center p-4'>
+    <motion.div 
+      initial={{opacity: 0}}
+      animate={{opacity: 1}}
+      transition={{duration: 0.6}}
+      className={'min-h-screen bg-linear-to-br flex items-center p-4 from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-slate-800 transition-colors'}>
       <Start/>
-    </div>
+    </motion.div>
   )
 }
 
