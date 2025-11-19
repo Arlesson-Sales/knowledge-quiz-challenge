@@ -7,7 +7,7 @@ const Title = ({children}: {children: React.ReactNode}) => {
         <Trophy className='size-12'/>
       </div>
 
-      <h4 className='text-4xl text-center font-medium'>{children}</h4>
+      <h4 className='text-4xl text-gray-900 dark:text-gray-50 text-center font-medium'>{children}</h4>
     </div>
   )
 }
